@@ -1,5 +1,5 @@
 _G.Scripts = {
-    [4069560710] = "https://raw.githubusercontent.com/diepedyt/bui/main/AnimeFighters.lua",
+    [4069560710] = "https://raw.githubusercontent.com/CrazyHub123/NexusHubRevival/refs/heads/main/OneFruitSimulator.lua",
 }
 
 if not _G.Override then
@@ -10,3 +10,4 @@ for i,v in pairs(_G.Override) do
 end
 
 loadstring(game:HttpGet(_G.Scripts[game.gameId]))()
+
