@@ -1,5 +1,6 @@
 _G.Scripts = {
-    [4069560710] = "https://raw.githubusercontent.com/CrazyHub123/NexusHubRevival/refs/heads/main/OneFruitSimulator.lua",
+    [4069560710] = "https://raw.githubusercontent.com/diepedyt/bui/main/AnimeFighters.lua",
+}
 
 if not _G.Override then
     _G.Override = {}
