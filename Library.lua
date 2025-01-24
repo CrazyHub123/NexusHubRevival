@@ -1771,7 +1771,7 @@ end)
                     object:Destroy()
                 end
             
-                dropdown.Box.Options.Size = UDim2.new(1, 0, 0, 0)  -- Reset size to 0 height
+                dropdown.Box.Options.Size = UDim2.new(0, 0, 0, 0)
             end
 
 
