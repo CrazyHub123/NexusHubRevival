@@ -1883,6 +1883,10 @@ end)
             end
             
             function Dropdown:refresh_options(new_options)
+                if not Library.Flags[self.flag] then
+                    Library.Flags[self.flag] = {}
+                end
+            
                 for _, object in ipairs(dropdown.Box.Options:GetChildren()) do
                     if object.Name == "Option" then
                         object:Destroy()
@@ -1904,7 +1908,8 @@ end)
                     end
             
                     new_option.MouseButton1Click:Connect(function()
-                        if table.find(Library.Flags[self.flag], value) then
+                        local selected = table.find(Library.Flags[self.flag], value)
+                        if selected then
                             for i, v in ipairs(Library.Flags[self.flag]) do
                                 if v == value then
                                     table.remove(Library.Flags[self.flag], i)
@@ -1914,7 +1919,7 @@ end)
                         else
                             table.insert(Library.Flags[self.flag], value)
                         end
-                        
+            
                         if #Library.Flags[self.flag] == 0 then
                             dropdown.Box.TextLabel.Text = "None"
                         else
