@@ -1882,72 +1882,7 @@ end)
                 end
             end
             
-            function Dropdown:refresh_options(new_options)
-                if not Library.Flags[self.flag] then
-                    Library.Flags[self.flag] = {}
-                end
-            
-                for _, object in ipairs(dropdown.Box.Options:GetChildren()) do
-                    if object.Name == "Option" then
-                        object:Destroy()
-                    end
-                end
-            
-                local list_size = 0
-                for _, value in ipairs(new_options) do
-                    list_size += 23
-                    
-                    local new_option = option:Clone()
-                    new_option.Parent = dropdown.Box.Options
-                    new_option.Text = value
-                    
-                    if table.find(Library.Flags[self.flag], value) then
-                        new_option.TextTransparency = 0
-                    else
-                        new_option.TextTransparency = 0.5
-                    end
-            
-                    new_option.MouseButton1Click:Connect(function()
-                        local selected = table.find(Library.Flags[self.flag], value)
-                        if selected then
-                            for i, v in ipairs(Library.Flags[self.flag]) do
-                                if v == value then
-                                    table.remove(Library.Flags[self.flag], i)
-                                    break
-                                end
-                            end
-                        else
-                            table.insert(Library.Flags[self.flag], value)
-                        end
-            
-                        if #Library.Flags[self.flag] == 0 then
-                            dropdown.Box.TextLabel.Text = "None"
-                        else
-                            dropdown.Box.TextLabel.Text = table.concat(Library.Flags[self.flag], ", ")
-                        end
-            
-                        self.callback(Library.Flags[self.flag])
-                        Library.save_flags()
-            
-                        for _, option in ipairs(dropdown.Box.Options:GetChildren()) do
-                            if option.Name == "Option" then
-                                option.TextTransparency = table.find(Library.Flags[self.flag], option.Text) and 0 or 0.5
-                            end
-                        end
-                    end)
-                end
-            
-                TweenService:Create(dropdown.Box.Options, TweenInfo.new(0.4), {
-                    Size = UDim2.new(0, 202, 0, list_size)
-                }):Play()
-            
-                TweenService:Create(dropdown, TweenInfo.new(0.4), {
-                    Size = UDim2.new(0, 215, 0, 36 + list_size)
-                }):Play()
-            end
-
-            
-
+     
             if not Library.Flags[self.flag] then
                 Library.Flags[self.flag] = self.option
             end
