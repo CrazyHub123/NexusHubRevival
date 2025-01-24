@@ -483,7 +483,7 @@ Line.Size = UDim2.new(0, 2, 0, 387)
     shadowMobile.Position = UDim2.new(0.5, 0, 0.5, 0)
     shadowMobile.Size = UDim2.new(0, 100, 0, 58)
     shadowMobile.ZIndex = 0
-    shadowMobile.Image = "rbxassetid://92095746059925"
+    shadowMobile.Image = "rbxassetid://17183270335"
     shadowMobile.ImageTransparency = 0.200
 
     local State = Instance.new("TextLabel")
@@ -514,7 +514,7 @@ Line.Size = UDim2.new(0, 2, 0, 387)
     Icon.BorderSizePixel = 0
     Icon.Position = UDim2.new(0.5, 0, 0.5, 0)
     Icon.Size = UDim2.new(0, 35, 0, 35)
-    Icon.Image = "rbxassetid://122209570435821" --// [rbxassetid://secret]
+    Icon.Image = "rbxassetid://92095746059925" --// [rbxassetid://secret]
 
     if deviceType == "PC" then
     mobile_button.Visible = false
