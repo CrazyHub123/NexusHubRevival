@@ -1770,8 +1770,6 @@ end)
             
                     object:Destroy()
                 end
-            
-                dropdown.Box.Options.Size = UDim2.new(0, 0, 0, 0)
             end
 
 
@@ -1883,42 +1881,6 @@ end)
                         end)
                     end
                 end
-            end
-
-            function Dropdown:refresh(options)
-                Dropdown.clear()
-            
-                local list_size = 0
-            
-                for _, value in ipairs(options) do
-                    list_size = list_size + 23
-                    
-                    local new_option = option:Clone()
-                    new_option.Parent = dropdown.Box.Options
-                    new_option.Text = value
-            
-                    if value == Library.Flags[self.flag] then
-                        new_option.TextTransparency = 0
-                    end
-            
-                    new_option.MouseButton1Click:Connect(function()
-                        Library.Flags[self.flag] = value
-                        
-                        if list_open then
-                            dropdown.Box.TextLabel.Text = Library.Flags[self.flag]
-                        end
-                        
-                        self.callback(Library.Flags[self.flag])
-                        Library.save_flags()
-            
-                        Dropdown.select_option({
-                            new_option = new_option,
-                            flag = self.flag
-                        })
-                    end)
-                end
-            
-                dropdown.Box.Options.Size = UDim2.new(1, 0, 0, list_size)
             end
 
             
