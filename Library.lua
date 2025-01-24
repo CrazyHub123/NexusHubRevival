@@ -807,6 +807,10 @@ end)
         leftsectionlist.SortOrder = Enum.SortOrder.LayoutOrder
         leftsectionlist.Padding = UDim.new(0, 7)
 
+        local UIPadding = Instance.new("UIPadding")
+        UIPadding.Parent = left_section
+        UIPadding.PaddingBottom = UDim.new(0, 5)
+
         local right_section = Instance.new("ScrollingFrame")
         right_section.Name = "RightSection"
         right_section.Active = true
@@ -820,6 +824,10 @@ end)
         right_section.CanvasSize = UDim2.new(0, 0, 0, 0)
         right_section.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
         right_section.ScrollBarThickness = 0
+
+        local UIPadding_2 = Instance.new("UIPadding")
+        UIPadding_2.Parent = right_section
+        UIPadding_2.PaddingBottom = UDim.new(0, 5)
 
         local rightsectionlist = Instance.new("UIListLayout")
         rightsectionlist.Parent = right_section
