@@ -1763,14 +1763,17 @@ end)
             end
 
             function Dropdown:clear()
-                for _, object in dropdown.Box.Options:GetChildren() do
+                for _, object in ipairs(dropdown.Box.Options:GetChildren()) do
                     if object.Name ~= 'Option' then
                         continue
                     end
-
+            
                     object:Destroy()
                 end
+            
+                dropdown.Box.Options.Size = UDim2.new(1, 0, 0, 0)  -- Reset size to 0 height
             end
+
 
             function Dropdown:select_option()
                 TweenService:Create(self.new_option, TweenInfo.new(0.4), {
