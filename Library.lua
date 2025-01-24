@@ -796,7 +796,7 @@ end)
         left_section.BorderSizePixel = 0
         left_section.Position = UDim2.new(0.326180249, 0, 0.126760557, 0)
         left_section.Size = UDim2.new(0, 215, 0, 372)
-        left_section.AutomaticCanvasSize = Enum.AutomaticSize.XY
+        left_section.AutomaticCanvasSize = Enum.AutomaticSize.Y
         left_section.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
         left_section.ScrollBarThickness = 0
 
@@ -815,7 +815,7 @@ end)
         right_section.BorderSizePixel = 0
         right_section.Position = UDim2.new(0.662374794, 0, 0.126760557, 0)
         right_section.Size = UDim2.new(0, 215, 0, 372)
-        right_section.AutomaticCanvasSize = Enum.AutomaticSize.XY
+        right_section.AutomaticCanvasSize = Enum.AutomaticSize.Y
         right_section.ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
         right_section.ScrollBarThickness = 0
 
