@@ -783,7 +783,7 @@ end)
         UICorner_2.Parent = Fill
 
         local UIGradient = Instance.new("UIGradient")
-        UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(66, 89, 182)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(37, 57, 137))}
+        UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(152, 97, 215)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(120, 34, 218))}
         UIGradient.Rotation = 20
         UIGradient.Parent = Fill
 
@@ -987,7 +987,7 @@ end)
             UICorner_3.Parent = Fill
 
             local UIGradient = Instance.new("UIGradient")
-            UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(66, 89, 182)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(37, 57, 137))}
+            UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(152, 97, 215)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(120, 34, 218))}
             UIGradient.Rotation = 20
             UIGradient.Parent = Fill
 
@@ -1108,7 +1108,7 @@ end)
             UICorner_3.Parent = Fill
 
             local UIGradient = Instance.new("UIGradient")
-            UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(66, 89, 182)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(37, 57, 137))}
+            UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(152, 97, 215)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(120, 34, 218))}
             UIGradient.Rotation = 20
             UIGradient.Parent = Fill
 
