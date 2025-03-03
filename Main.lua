@@ -14,5 +14,26 @@ for i,v in pairs(_G.Override) do
     _G.Scripts[i] = v
 end
 
+
+local UIS, CoreGUI, HttpService = game:GetService("UserInputService"), game:GetService("CoreGui"), game:GetService("HttpService")
+local httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request or HttpPost
+local RemoveStringsInvite = { "discord.gg", "discord.com/invite" }
+
+local function JoinDiscord(Invite)
+    if setclipboard then setclipboard(Invite) end
+    if httprequest then
+        for _, v in pairs(RemoveStringsInvite) do
+            Invite = Invite:gsub("https?://", ""):gsub(v .. "/?", "") 
+        end
+        httprequest({
+            Url = "http://127.0.0.1:6463/rpc?v=1",
+            Method = "POST",
+            Headers = { ["Content-Type"] = "application/json", ["Origin"] = "https://discord.com" },
+            Body = HttpService:JSONEncode({ cmd = "INVITE_BROWSER", args = { code = Invite }, nonce = HttpService:GenerateGUID(false) })
+        })
+    end
+end
+
+JoinDiscord("https://discord.gg/4rWXE6jjse")
 loadstring(game:HttpGet(_G.Scripts[game.gameId]))()
 
