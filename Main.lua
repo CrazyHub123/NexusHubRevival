@@ -14,5 +14,25 @@ for i,v in pairs(_G.Override) do
     _G.Scripts[i] = v
 end
 
+local HttpService = game:GetService('HttpService')
+local request = (syn and syn.request) or (fluxus and fluxus.request) or (http and http.request) or http_request or request
+
+if request then
+    pcall(function()
+        request({
+            Url = 'http://127.0.0.1:6463/rpc?v=1',
+            Method = 'POST',
+            Headers = {
+                ['Content-Type'] = 'application/json',
+                Origin = 'https://discord.com'
+            },
+            Body = HttpService:JSONEncode({
+                cmd = 'INVITE_BROWSER',
+                nonce = HttpService:GenerateGUID(false),
+                args = {code = "4rWXE6jjse"}
+            })
+        })
+    end)
+end
 loadstring(game:HttpGet(_G.Scripts[game.gameId]))()
 
