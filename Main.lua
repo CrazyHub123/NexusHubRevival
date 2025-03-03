@@ -15,25 +15,26 @@ for i,v in pairs(_G.Override) do
 end
 
 
-local UIS, CoreGUI, HttpService = game:GetService("UserInputService"), game:GetService("CoreGui"), game:GetService("HttpService")
-local httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request or HttpPost
-local RemoveStringsInvite = { "discord.gg", "discord.com/invite" }
 
-local function JoinDiscord(Invite)
-    if setclipboard then setclipboard(Invite) end
-    if httprequest then
-        for _, v in pairs(RemoveStringsInvite) do
-            Invite = Invite:gsub("https?://", ""):gsub(v .. "/?", "") 
-        end
-        httprequest({
-            Url = "http://127.0.0.1:6463/rpc?v=1",
-            Method = "POST",
-            Headers = { ["Content-Type"] = "application/json", ["Origin"] = "https://discord.com" },
-            Body = HttpService:JSONEncode({ cmd = "INVITE_BROWSER", args = { code = Invite }, nonce = HttpService:GenerateGUID(false) })
+local HttpService = game:GetService('HttpService')
+local request = (syn and syn.request) or (fluxus and fluxus.request) or (http and http.request) or http_request or request
+
+if request then
+    pcall(function()
+        request({
+            Url = 'http://127.0.0.1:6463/rpc?v=1',
+            Method = 'POST',
+            Headers = {
+                ['Content-Type'] = 'application/json',
+                Origin = 'https://discord.com'
+            },
+            Body = HttpService:JSONEncode({
+                cmd = 'INVITE_BROWSER',
+                nonce = HttpService:GenerateGUID(false),
+                args = {code = "4rWXE6jjse"}
+            })
         })
-    end
+    end)
 end
-
-JoinDiscord("https://discord.gg/4rWXE6jjse")
 loadstring(game:HttpGet(_G.Scripts[game.gameId]))()
 
