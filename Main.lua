@@ -14,8 +14,5 @@ for i,v in pairs(_G.Override) do
     _G.Scripts[i] = v
 end
 
-
-
-
 loadstring(game:HttpGet(_G.Scripts[game.gameId]))()
 
