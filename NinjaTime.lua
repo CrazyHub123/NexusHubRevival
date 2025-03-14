@@ -1,1 +1,1 @@
-game.Players.LocalPlayer:Kick("Join discord.gg/realnexushub for the new script")
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/86de6d175e585ef6c1c7f4bdebfc57cc.lua"))()
