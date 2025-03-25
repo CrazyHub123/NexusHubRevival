@@ -33,12 +33,13 @@ if request then
     end)
 end
 
-
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/CrazyHub123/NexusHubRevival/refs/heads/main/KeySystem.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Estevansit0/Scripts/refs/heads/main/KeySystemUi/luarmor.lua"))()
 local Window = Library:Window({
     DisplayName = "NexusHub",
     script_id = _G.Scripts[game.gameId],
-    MinIcon = "rbxassetid://94637483746756",
     File = "NexusKey.txt",
     Discord = "discord.gg/realnexushub",
+    MinIcon = "rbxassetid://94637483746756",
+    Linkvertise = "https://ads.luarmor.net/get_key?for=NexusHub_Linkvertise-dnHUcWcDLqCu",
+    Lootlabs = "https://ads.luarmor.net/get_key?for=NexuHub_Lootlabs-GWOQprmwtgsv",
 })
