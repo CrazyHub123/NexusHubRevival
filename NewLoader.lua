@@ -1,3 +1,4 @@
+print("x")
 _G.Scripts = {
     [7074860883] = "187ba48289a2b0ea30d7a14ac3b1adb6",
     [3110388936] = "b7eaa8d73e8f9c65160a71b859b750f5",
