@@ -3,7 +3,9 @@ _G.Scripts = {
     [3110388936] = "b7eaa8d73e8f9c65160a71b859b750f5",
     [6325068386] = "fe1f887df195d6304f30fbf3eb2f0e48",
     [6471449680] = "e2381843cef1eecf8bd0958090be3109",
-    [4069560710] = "02d46e8de0dbbb9df0c1bdf7c306e83c"
+    [4069560710] = "02d46e8de0dbbb9df0c1bdf7c306e83c",
+    [7178032757] = "781f44f671dec53df0b54b8dc741df1d"
+
 }
 
 if not _G.Override then
@@ -34,6 +36,7 @@ if request then
     end)
 end
 
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Estevansit0/Scripts/refs/heads/main/KeySystemUi/luarmor.lua"))()
 local Window = Library:Window({
     DisplayName = "NexusHub",
@@ -44,3 +47,4 @@ local Window = Library:Window({
     Linkvertise = "https://ads.luarmor.net/get_key?for=NexusHub_Linkvertise-dnHUcWcDLqCu",
     Lootlabs = "https://ads.luarmor.net/get_key?for=NexuHub_Lootlabs-GWOQprmwtgsv",
 })
+
