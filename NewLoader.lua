@@ -4,8 +4,8 @@ _G.Scripts = {
     [6325068386] = "fe1f887df195d6304f30fbf3eb2f0e48",
     [6471449680] = "e2381843cef1eecf8bd0958090be3109",
     [4069560710] = "02d46e8de0dbbb9df0c1bdf7c306e83c",
-    [7178032757] = "781f44f671dec53df0b54b8dc741df1d"
-
+    [7178032757] = "781f44f671dec53df0b54b8dc741df1d",
+    [7314989375] = "6e7b0b32ba525f3f6e0be16003615fbd"
 }
 
 if not _G.Override then
