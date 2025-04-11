@@ -36,7 +36,8 @@ if request then
     end)
 end
 
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CrazyHub123/NexusHubRevival/refs/heads/main/AntiSkid.lua"))()
+task.wait(.1)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Estevansit0/Scripts/refs/heads/main/KeySystemUi/luarmor.lua"))()
 local Window = Library:Window({
     DisplayName = "NexusHub",
