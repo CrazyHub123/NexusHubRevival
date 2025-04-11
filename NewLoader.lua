@@ -5,7 +5,8 @@ _G.Scripts = {
     [6471449680] = "e2381843cef1eecf8bd0958090be3109",
     [4069560710] = "02d46e8de0dbbb9df0c1bdf7c306e83c",
     [7178032757] = "781f44f671dec53df0b54b8dc741df1d",
-    [7314989375] = "6e7b0b32ba525f3f6e0be16003615fbd"
+    [7314989375] = "6e7b0b32ba525f3f6e0be16003615fbd",
+    [6504986360] = "75bae9daa31061f82ca1e1ceb2420542"
 }
 
 if not _G.Override then
@@ -36,6 +37,7 @@ if request then
     end)
 end
 
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CrazyHub123/NexusHubRevival/refs/heads/main/AntiSkid.lua"))()
 task.wait(.1)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Estevansit0/Scripts/refs/heads/main/KeySystemUi/luarmor.lua"))()
@@ -48,4 +50,3 @@ local Window = Library:Window({
     Linkvertise = "https://ads.luarmor.net/get_key?for=NexusHub_Linkvertise-dnHUcWcDLqCu",
     Lootlabs = "https://ads.luarmor.net/get_key?for=NexuHub_Lootlabs-GWOQprmwtgsv",
 })
-
